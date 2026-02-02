@@ -1,0 +1,8 @@
+data_source_id,data_source_name,platform_type
+1,Google Ads,Paid Search
+2,Bing Ads,Paid Search
+3,Facebook Ads,Paid Social
+4,LinkedIn Ads,Paid Social
+5,StackAdapt,Programmatic
+6,Amazon Ad Server,Programmatic
+7,Goggle Organic,Organic
