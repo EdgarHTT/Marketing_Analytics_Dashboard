@@ -1,0 +1,14 @@
+Total Cost MoM = 
+VAR ThisMonth = CALCULATE([Total Cost], DATEADD(dim_date[date].[Date], 0, MONTH))
+VAR LastMonth = CALCULATE([Total Cost], DATEADD(dim_date[date].[Date], -1, MONTH))
+VAR Result = ThisMonth - LastMonth
+VAR Arrow =
+    IF(
+        Result > 0, UNICHAR(9650),
+        IF(Result < 0, UNICHAR(9660), UNICHAR(9654))
+    ) 
+RETURN Arrow & " " & FORMAT(Result, "$##0,K")
+
+Red Indicator = #D64554
+Green Indicator = #1AAB40
+Neutral Indicator = #D9B300
